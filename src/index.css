@@ -149,4 +149,41 @@ All colors MUST be HSL.
   .health-glow {
     box-shadow: var(--shadow-glow);
   }
+
+  /* Interactive elements */
+  .hover-lift {
+    @apply transition-all duration-300 hover:translate-y-[-2px] hover:shadow-[var(--shadow-medium)];
+  }
+
+  .floating-button {
+    @apply fixed z-50 rounded-full transition-all duration-300 hover:scale-110 active:scale-95;
+  }
+
+  /* Modern scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--primary) / 0.3) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.3);
+    border-radius: 3px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.5);
+  }
+
+  /* Focus styles for accessibility */
+  .focus-visible\:ring-health:focus-visible {
+    @apply ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
 }

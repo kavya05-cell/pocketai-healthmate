@@ -16,13 +16,13 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <div className="flex items-center space-x-2 sm:space-x-3">
-            <img src={healthIcon} alt="PocketAI HealthMate" className="h-6 w-6 sm:h-8 sm:w-8" />
+            <img src={healthIcon} alt="PocketAI HealthMate" className="h-5 w-5 xs:h-6 xs:w-6 sm:h-8 sm:w-8" />
             <div className="hidden sm:block">
               <h1 className="text-lg sm:text-xl font-bold text-foreground">PocketAI HealthMate</h1>
               <p className="text-xs text-muted-foreground">Your Personal Health Assistant</p>
             </div>
             <div className="sm:hidden">
-              <h1 className="text-sm font-bold text-foreground">HealthMate</h1>
+              <h1 className="text-xs xs:text-sm font-bold text-foreground">HealthMate</h1>
             </div>
           </div>
           
@@ -68,8 +68,12 @@ export const Header = () => {
           <div className="md:hidden">
             <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="h-9 w-9">
-                  <Menu className="h-5 w-5" />
+                <Button variant="ghost" size="icon" className="h-8 w-8 xs:h-9 xs:w-9 transition-colors">
+                  {isMenuOpen ? (
+                    <X className="h-4 w-4 xs:h-5 xs:w-5" />
+                  ) : (
+                    <Menu className="h-4 w-4 xs:h-5 xs:w-5" />
+                  )}
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>

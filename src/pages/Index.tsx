@@ -74,13 +74,18 @@ const Index = () => {
       </footer>
 
       {/* Floating Chatbot Button */}
-      <Button
-        onClick={() => setIsChatbotOpen(true)}
-        className="fixed bottom-4 right-4 h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse-glow gradient-primary border-2 border-white/20 group z-40"
-        size="icon"
-      >
-        <Bot className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
-      </Button>
+      <div className="fixed bottom-4 right-4 z-40 group">
+        <Button
+          onClick={() => setIsChatbotOpen(true)}
+          className="h-16 w-16 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse-glow gradient-primary border-2 border-white/20 group relative"
+          size="icon"
+        >
+          <Bot className="h-7 w-7 text-white group-hover:scale-110 transition-transform" />
+        </Button>
+        <div className="absolute bottom-full right-0 mb-2 px-3 py-1 bg-background border rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+          <span className="text-sm text-foreground">text goes here</span>
+        </div>
+      </div>
 
       {/* Health Assistant Sidebar */}
       <HealthAssistantSidebar 

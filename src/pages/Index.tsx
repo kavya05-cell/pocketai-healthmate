@@ -7,7 +7,7 @@ import { HabitTracker } from "@/components/HabitTracker";
 import { HealthAssistantSidebar } from "@/components/HealthAssistantSidebar";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { BarChart3, AlertTriangle, Target, MessageCircle } from "lucide-react";
+import { BarChart3, AlertTriangle, Target, Bot } from "lucide-react";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -79,7 +79,7 @@ const Index = () => {
         className="fixed bottom-4 right-4 h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse-glow gradient-primary border-2 border-white/20 group z-40"
         size="icon"
       >
-        <MessageCircle className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
+        <Bot className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
       </Button>
 
       {/* Health Assistant Sidebar */}

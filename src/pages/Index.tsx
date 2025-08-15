@@ -30,21 +30,21 @@ const Index = () => {
       <HeroSection onStartTracking={handleStartTracking} />
       
       {/* Main Content */}
-      <main id="main-content" className="container mx-auto px-4 py-6 sm:py-8">
+      <main id="main-content" className="container mx-auto px-4 py-6 md:py-8">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-6 sm:mb-8 h-auto p-1">
-            <TabsTrigger value="dashboard" className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 py-2 sm:py-3 text-xs sm:text-sm">
-              <BarChart3 className="h-3 w-3 sm:h-4 sm:w-4" />
+          <TabsList className="grid w-full grid-cols-3 mb-6 md:mb-8 h-auto p-1">
+            <TabsTrigger value="dashboard" className="flex flex-col md:flex-row items-center gap-1 md:gap-2 py-2 md:py-3 text-xs md:text-sm">
+              <BarChart3 className="h-3 w-3 md:h-4 md:w-4" />
               <span className="hidden xs:inline">Dashboard</span>
               <span className="xs:hidden">Stats</span>
             </TabsTrigger>
-            <TabsTrigger value="symptoms" className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 py-2 sm:py-3 text-xs sm:text-sm">
-              <AlertTriangle className="h-3 w-3 sm:h-4 sm:w-4" />
+            <TabsTrigger value="symptoms" className="flex flex-col md:flex-row items-center gap-1 md:gap-2 py-2 md:py-3 text-xs md:text-sm">
+              <AlertTriangle className="h-3 w-3 md:h-4 md:w-4" />
               <span className="hidden xs:inline">Symptoms</span>
               <span className="xs:hidden">Track</span>
             </TabsTrigger>
-            <TabsTrigger value="habits" className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 py-2 sm:py-3 text-xs sm:text-sm">
-              <Target className="h-3 w-3 sm:h-4 sm:w-4" />
+            <TabsTrigger value="habits" className="flex flex-col md:flex-row items-center gap-1 md:gap-2 py-2 md:py-3 text-xs md:text-sm">
+              <Target className="h-3 w-3 md:h-4 md:w-4" />
               <span className="hidden xs:inline">Habits</span>
               <span className="xs:hidden">Goals</span>
             </TabsTrigger>
@@ -65,9 +65,9 @@ const Index = () => {
       </main>
       
       {/* Footer */}
-      <footer className="border-t bg-muted/30 py-6 sm:py-8 mt-12 sm:mt-16">
+      <footer className="border-t bg-muted/30 py-6 md:py-8 mt-12 md:mt-16">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-xs sm:text-sm text-muted-foreground">
+          <p className="text-xs md:text-sm text-muted-foreground">
             © 2024 PocketAI HealthMate. Your privacy and health data are secure.
           </p>
         </div>

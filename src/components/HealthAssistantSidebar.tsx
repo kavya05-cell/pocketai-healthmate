@@ -72,7 +72,7 @@ export const HealthAssistantSidebar = ({ isOpen, onClose }: HealthAssistantSideb
 
   return (
     <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
-      <div className="fixed right-0 top-0 h-full w-full sm:w-96 bg-background border-l shadow-xl">
+      <div className="fixed right-0 top-0 h-full w-full md:w-96 bg-background border-l shadow-xl">
         <Card className="h-full rounded-none border-0">
           <CardHeader className="border-b">
             <div className="flex items-center justify-between">

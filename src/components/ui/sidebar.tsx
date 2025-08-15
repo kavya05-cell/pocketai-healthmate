@@ -298,7 +298,7 @@ const SidebarRail = React.forwardRef<
       onClick={toggleSidebar}
       title="Toggle Sidebar"
       className={cn(
-        "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex",
+        "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 md:flex",
         "[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize",
         "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize",
         "group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar",
@@ -520,7 +520,7 @@ const sidebarMenuButtonVariants = cva(
       },
       size: {
         default: "h-8 text-sm",
-        sm: "h-7 text-xs",
+        md: "h-7 text-xs",
         lg: "h-12 text-sm group-data-[collapsible=icon]:!p-0",
       },
     },
@@ -707,7 +707,7 @@ const SidebarMenuSubButton = React.forwardRef<
   HTMLAnchorElement,
   React.ComponentProps<"a"> & {
     asChild?: boolean
-    size?: "sm" | "md"
+    size?: "md" | "md"
     isActive?: boolean
   }
 >(({ asChild = false, size = "md", isActive, className, ...props }, ref) => {
@@ -722,7 +722,7 @@ const SidebarMenuSubButton = React.forwardRef<
       className={cn(
         "flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-sidebar-foreground outline-none ring-sidebar-ring hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-sidebar-accent-foreground",
         "data-[active=true]:bg-sidebar-accent data-[active=true]:text-sidebar-accent-foreground",
-        size === "sm" && "text-xs",
+        size === "md" && "text-xs",
         size === "md" && "text-sm",
         "group-data-[collapsible=icon]:hidden",
         className

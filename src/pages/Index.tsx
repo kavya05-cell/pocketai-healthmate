@@ -30,44 +30,44 @@ const Index = () => {
       <HeroSection onStartTracking={handleStartTracking} />
       
       {/* Main Content */}
-      <main id="main-content" className="container mx-auto px-4 py-6 md:py-8">
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-6 md:mb-8 h-auto p-1">
-            <TabsTrigger value="dashboard" className="flex flex-col md:flex-row items-center gap-1 md:gap-2 py-2 md:py-3 text-xs md:text-sm">
-              <BarChart3 className="h-3 w-3 md:h-4 md:w-4" />
+      <main id="main-content" className="responsive-container py-6 md:py-8 lg:py-12">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full max-w-none">
+          <TabsList className="grid w-full grid-cols-3 mb-6 md:mb-8 lg:mb-12 h-auto p-1 mx-auto max-w-2xl md:max-w-4xl lg:max-w-none">
+            <TabsTrigger value="dashboard" className="flex flex-col md:flex-row items-center gap-1 md:gap-2 py-2 md:py-3 text-xs md:text-sm hover-lift group">
+              <BarChart3 className="h-3 w-3 md:h-4 md:w-4 group-hover:animate-bounce-subtle transition-transform" />
               <span className="hidden xs:inline">Dashboard</span>
               <span className="xs:hidden">Stats</span>
             </TabsTrigger>
-            <TabsTrigger value="symptoms" className="flex flex-col md:flex-row items-center gap-1 md:gap-2 py-2 md:py-3 text-xs md:text-sm">
-              <AlertTriangle className="h-3 w-3 md:h-4 md:w-4" />
+            <TabsTrigger value="symptoms" className="flex flex-col md:flex-row items-center gap-1 md:gap-2 py-2 md:py-3 text-xs md:text-sm hover-lift group">
+              <AlertTriangle className="h-3 w-3 md:h-4 md:w-4 group-hover:animate-bounce-subtle transition-transform" />
               <span className="hidden xs:inline">Symptoms</span>
               <span className="xs:hidden">Track</span>
             </TabsTrigger>
-            <TabsTrigger value="habits" className="flex flex-col md:flex-row items-center gap-1 md:gap-2 py-2 md:py-3 text-xs md:text-sm">
-              <Target className="h-3 w-3 md:h-4 md:w-4" />
+            <TabsTrigger value="habits" className="flex flex-col md:flex-row items-center gap-1 md:gap-2 py-2 md:py-3 text-xs md:text-sm hover-lift group">
+              <Target className="h-3 w-3 md:h-4 md:w-4 group-hover:animate-bounce-subtle transition-transform" />
               <span className="hidden xs:inline">Habits</span>
               <span className="xs:hidden">Goals</span>
             </TabsTrigger>
           </TabsList>
           
-          <TabsContent value="dashboard">
+          <TabsContent value="dashboard" className="animate-fade-in">
             <HealthDashboard />
           </TabsContent>
           
-          <TabsContent value="symptoms">
+          <TabsContent value="symptoms" className="animate-fade-in">
             <SymptomTracker />
           </TabsContent>
           
-          <TabsContent value="habits">
+          <TabsContent value="habits" className="animate-fade-in">
             <HabitTracker />
           </TabsContent>
         </Tabs>
       </main>
       
       {/* Footer */}
-      <footer className="border-t bg-muted/30 py-6 md:py-8 mt-12 md:mt-16">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-xs md:text-sm text-muted-foreground">
+      <footer className="border-t bg-muted/30 py-6 md:py-8 lg:py-12 mt-12 md:mt-16 lg:mt-24">
+        <div className="responsive-container text-center">
+          <p className="text-xs md:text-sm lg:text-base text-muted-foreground animate-fade-in">
             © 2024 PocketAI HealthMate. Your privacy and health data are secure.
           </p>
         </div>
